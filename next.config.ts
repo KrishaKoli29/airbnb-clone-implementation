@@ -1,9 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // @ts-expect-error: allowedDevOrigins is required by recent Next.js security updates but may be missing from older local TS types.
+  // @ts-ignore: allowedDevOrigins is needed for local dev network access
   allowedDevOrigins: ["192.168.56.1"],
   images: {
+    // ... rest of your config
     remotePatterns: [
       {
         protocol: "https",
